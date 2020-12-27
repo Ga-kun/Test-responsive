@@ -1,0 +1,1619 @@
+/*Шрифты*/
+@font-face {
+	font-family:'Poppins';
+	src:url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+	font-family:'RussoOne';
+	src:url(../fonts/RussoOne-Regular.ttf);
+}
+
+@font-face {
+	font-family:'RobotoCondensed';
+	src:url(../fonts/RobotoCondensed-Bold.ttf);
+}
+/*Шрифты*/
+
+
+/*Стили шапки (не меню!)*/
+
+#header {
+	min-width: 100%;
+	height: 400px;
+	background-color: #1F1B20;
+	background-image: url(../Imgicon/Header.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/*Стили шапки*/
+
+
+/*Стили шапки (меню!)*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*----------Стили для header----------*/
+
+header {
+	
+	background-position: center 0;
+	
+	background-repeat: no-repeat;
+	
+	background-attachment: fixed;
+
+	background-size: cover;
+	
+	background-color: #1c1c23;
+	
+	height: 100vh;
+}
+
+.header-bar {
+	background-color: rgba(26, 26, 32, 0.9);
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.header-bar__container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center; 
+}
+
+.logo__link {
+	text-decoration: none; 
+}
+
+.logo__name {
+	font-size: 25px;
+	color: #fff;
+	font-family: 'Poppins'
+}
+
+.logo__color {
+	font-size: 30px;
+	color: #E35F21;
+	font-weight: 500; 
+	font-family: 'Poppins'
+}
+
+
+.main-nav {
+	font-size: 0;
+	font-family:'RussoOne'
+}
+
+.main-nav__link {
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	line-height: 30px;
+	color: #fff;
+	padding: 28px 40px;
+	text-decoration: none;
+	transition: 0.3s;
+	background-color: #E35F21;
+	border-right: 3px solid #1F1B20;
+}
+
+.main-nav__link:hover {
+	background-color: #292932;
+}
+
+.main-nav__link::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transform: scaleX(0);
+	transition: 0.3s;
+}
+
+.main-nav__link:hover::after {
+	transform: scaleX(1);
+}
+
+.nav-active {
+	background-color: #292932;
+	transform: scaleX(1);
+}
+
+.nav-active::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ffaa91;
+	transform: scaleX(1);
+	transition: 0.3s;
+}
+
+.nav-active:hover::after {
+	transform: scaleX(1);
+}
+
+
+/*----------Кнопка для адаптивного меню----------*/
+
+.menuToggle {
+	display: none;
+	position: absolute;
+	top: 22px;
+	right: 15px;
+	cursor: pointer;
+}
+
+
+/*----------Адаптивная разметка----------*/
+
+@media screen and (max-width: 960px) {
+	.header-bar__container {
+		display: block;
+		text-align: center;
+	}
+	.header-social {
+		display: none;
+	}
+	.main-nav {
+		display: none;
+		position: absolute;
+		background-color: #E35F21;
+		top: 64px;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+	.main-nav__link {
+		display: block;
+		color: #fff;
+		font-weight: normal;
+		margin: 0;
+		padding: 18px 0;
+		background-color: #E35F21;
+	}
+	.menuToggle {
+		display: block;
+		z-index: 100;
+	}
+	.main-nav__link:hover {
+		background-color: #1a1a20;
+		color: #ffaa91;
+	}
+	.main-nav__link::after,
+	.active::after {
+		display: none;
+	}
+}
+
+
+/*Стили шапки (меню!)*/
+
+
+/*Размеры и стили секций сайта, именно тут нужно не забывать прописывать каждую новую секцию галереи меню блюд*/
+
+#mainmenu {
+	width: 100%;
+	min-height: 1000px;
+	padding-top: 5%;
+	background-color: #2B2A29;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#about {
+	width: 100%;
+	min-height: 600px;
+	background-color: #2B2A29;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#classic,
+#fruits,
+#firm,
+#carbonara,
+#other {
+	width: 100%;
+	min-height: 500px;
+	background-color: #2B2A29;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	padding-top: 2%;
+}
+
+
+/*Размеры и стили секций сайта, именно тут нужно не забывать прописывать каждую новую секцию галереи меню блюд*/
+
+
+/****************Блок "О нас"****************/
+
+img {
+	display: block;
+	width: 100%;
+	height: 100% auto;
+}
+
+.feature {
+	background-color: #2B2A29;
+	color: white;
+}
+
+
+
+/*Текст блока "О нас"*/
+.text {
+	padding: 10%;
+	place-self: center;
+	font-family:'RussoOne';
+	font-size: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
+}
+
+#colormotto_1 {
+	color: #E35F21;
+	font-weight: 600;
+	font-family:'RussoOne'
+}
+
+#colormotto_2 {
+	color: #FEFEFE;
+	font-weight: 600;
+	font-family:'RussoOne'	
+}
+
+#partners_link {	
+	
+    text-decoration: none; 
+	color: #E35F21;
+	position: relative;
+	cursor: pointer;
+	line-height: 1; 
+	text-decoration: none; 
+	font-family:'RussoOne';
+
+}
+
+#partners_link:hover {
+	color: #ec817d
+}
+
+#partners_link:after {
+	display: block;
+	position: absolute;
+	left: 0; 
+	width: 0;
+	height: 2px; 
+	background-color: rgb(178, 91, 50); 
+	content: "";
+	transition: width 0.3s ease-out; 
+}
+
+#partners_link:hover:after,
+#partners_link:focus:after {
+	width: 100%; 
+}
+
+
+
+
+/*Кнопка в разделе "О нас"*/
+
+/****************Блок "О нас"****************/
+
+/*Позиционирование и стилизация подписей секций сайта*/
+
+.label {
+	padding-top: 5%;
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	font-size: 30px;
+	color: #E35F21;
+	font-family:'RussoOne'	
+}
+
+#label_innercolor {
+	font-family:'RussoOne';
+	color: #FEFEFE
+}
+
+.sublabel {
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+	color: #FEFEFE;
+	font-family:'RussoOne'	
+}
+
+
+/*Позиционирование и стилизация подписей секций сайта*/
+
+
+/*----------Адаптивная разметка галереи меню блюд----------*/
+
+body:before {
+	margin: 1em;
+}
+
+@media (min-width: 980px) {
+	body:before {
+		color: black;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	body:before {
+		color: black;
+	}
+}
+
+@media (max-width: 767px) {
+	body:before {
+		color: black;
+	}
+}
+
+@media (max-width: 480px) {
+	body:before {
+		color: black;
+	}
+}
+
+
+/*----------Адаптивная разметка галереи меню блюд----------*/
+
+
+/* Базовые стили секции галереи*/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+
+/* Базовые стили секции галереи*/
+
+
+/* Плэйсхолдер (формирование окна галереи ((границ!))*/
+
+::-webkit-input-placeholder {
+	color: #FFF;
+}
+
+:-moz-placeholder {
+	color: #FFF;
+}
+
+::-moz-placeholder {
+	color: #FFF;
+}
+
+:-ms-input-placeholder {
+	color: #FFF;
+}
+
+
+/* Плэйсхолдер (формирование окна галереи ((границ!))*/
+
+
+/* Стили скроллбара (причём и скролбара всплывающего окна галереии)*/
+
+::-webkit-scrollbar {
+	width: 0.8em;
+	background: #E35F21;
+}
+
+::-webkit-scrollbar-track {}
+
+::-webkit-scrollbar-thumb {
+	background: #FEFEFE;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #FEFEFE;
+}
+
+
+/* Стили скроллбара (причём и скролбара всплывающего окна галереии)*/
+
+
+/* Стили выделяемого текста (при выделении мышкой)*/
+
+::selection {
+	background: #999;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #999;
+	color: #fff;
+}
+
+
+/* Стили выделяемого текста (при выделении мышкой)*/
+
+
+/* Стили ссылок галереи (окно уже является ссылкой, то которое превью)*/
+
+a {
+	text-decoration: underline;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: 0;
+	outline: 0 auto -webkit-focus-ring-color;
+	outline-offset: 0;
+}
+
+
+/* Стили ссылок галереи (окно уже является ссылкой, то которое превью)*/
+
+
+/* Стили внутренних окон галереи (лэйаут)*/
+
+body {
+	background-color: #2B2A29;
+	overflow-X: hidden;
+	font-size: 13px;
+	font-weight: 400;
+	font-family: 'Poppins';
+}
+
+.wrapper {
+	 margin: 5% auto;
+  display: block;
+  width: 70%;
+  height: 100%;
+  padding: 0;
+}
+
+
+.wrapper:before {
+	content: "";
+	display: table;
+}
+
+.wrapper_inner {
+	padding: 0.2em;
+	margin: 0;
+}
+
+.gallery_item {
+	float: left;
+ width: 200px;
+	height: 200px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-right: 0.25em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+	background: #2B2A29;
+	
+}
+
+.gallery_item:hover {background:#E35F21; 
+ transition: 0.6s;}
+
+.gallery_item_preview {
+	background: #2B2A29;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.itemdescription {
+	color: #E35F21;
+	font-family:'RussoOne';
+}
+
+
+.iitemdescription_bottom {
+	color: #FEFEFE;
+	font-family:'RussoOne';
+}
+
+.price {color: #E35F21;
+	font-family:'RussoOne';
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.gram {margin-right: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+font-size: 16px;
+ font-weight: 100;}
+
+.gallery_item_preview a {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	color: #333;
+	text-decoration: none;
+	overflow: hidden;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_item_preview a:hover {
+	color: #777;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_item_preview a svg.gallery_top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	stroke: none;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_item_preview a:hover svg.gallery_top {
+	top: -10em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_hide_top {
+	top: -10em !important;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_item_preview a:before {
+	content: "Осмотреть блюдо";
+	font-family:'RussoOne';
+	position: absolute;
+	top: 0.5em;
+	left: -30em;
+	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 0.99);
+	color: #F57171;
+	padding: 0.56em 1em;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.gallery_item_preview a:hover:before {
+	left: 0.5em;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+
+
+.gallery_item_preview a img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	display: block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_item_full {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.6);
+	z-index: 100;
+	overflow: hidden;
+}
+
+.gallery_item_full img {
+	display: block;
+	width: 100%;
+}
+
+.box {
+	margin: auto;
+	background: #FFF;
+	padding: 2em;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	min-width: 50%;
+	text-align: left;
+	border: 1px solid #DADADA;
+}
+
+.box h3 {
+	
+	color: #F88484;
+}
+
+
+/*Кнопка закрытия всплывающего окна*/
+
+.cl {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	color: #E35F21;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 2em;
+}
+
+.cl:hover {
+	color: #F88484;
+}
+
+
+/*Кнопка закрытия всплывающего окна*/
+
+
+/* Стили внутренних окон галереи (лэйаут)*/
+
+
+/* Стили кнопки которая отвечает за переключение вида галереи (из столбиков - списком), эта функция не нужна но без неё не работает весь скрипт галереи, поэтому этот кусок кода удалять нельзя! Я просто скрыл кнопку переключения вида галереи!*/
+
+.icon_list {
+	width: 30px;
+	height: 30px;
+	display: none;
+	/*Вот это отвечает за скрытие кнопки*/
+	padding: 0.5em;
+	text-decoration: none;
+	line-height: 0.4em;
+	background: #FFF;
+	color: #838383;
+	border: 1px solid #C2C2C2;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: absolute;
+	right: 0.3em;
+	top: 0.3em;
+	word-break: break-all;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.icon_list:hover {
+	background: #f55;
+	color: #fff;
+	border-color: #f11;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.icon_list_open {
+	background: #f55 !important;
+	color: #fff !important;
+}
+
+.gallery_item_list {
+	float: none !important;
+	display: block !important;
+	width: 50%;
+	margin: auto;
+	margin-top: 0.5em;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.gallery_line {
+	width: 130px !important;
+	height: 100px !important;
+	display: inline-block !important;
+	float: left !important;
+	margin-right: 1em !important;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+
+/* Стили кнопки которая отвечает за переключение вида галереи (из столбиков - списком), эта функция не нужна но без неё не работает весь скрипт галереи, поэтому этот кусок кода удалять нельзя! Я просто скрыл кнопку переключения вида галереи!*/
+
+
+/* Анимация всплытия окон (движок webkit)*/
+
+.efIn {
+	-webkit-animation: fx_in 0.65s 1 ease-in-out;
+	-moz-animation: fx_in 0.65s 1 ease-in-out;
+	-ms-animation: fx_in 0.65s 1 ease-in-out;
+	-o-animation: fx_in 0.65s 1 ease-in-out;
+	animation: fx_in 0.65s 1 ease-in-out;
+}
+
+.efOut {
+	-webkit-animation: fx_out 0.7s 1 ease-in-out;
+	-moz-animation: fx_out 0.7s 1 ease-in-out;
+	-ms-animation: fx_out 0.7s 1 ease-in-out;
+	-o-animation: fx_out 0.7s 1 ease-in-out;
+	animation: fx_out 0.7s 1 ease-in-out;
+}
+
+
+/* Анимация всплытия окон*/
+
+
+/*Анимация всплытия по ключевым кадрам*/
+
+@-webkit-keyframes fx_in {
+	from {
+		width: 0;
+		height: 0;
+		-webkit-border-radius: 100%;
+		opacity: 0;
+	}
+	50% {
+		-webkit-box-shadow: inset 0 0 0 0 #fff;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+		-webkit-border-radius: 0;
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fx_out {
+	from {
+		width: 100%;
+		height: 100%;
+		-webkit-border-radius: 0;
+		-webkit-box-shadow: inset 0 0 0 0 #fff;
+		opacity: 1;
+	}
+	50% {
+		-webkit-box-shadow: inset 0 0 0 80em #fff;
+	}
+	to {
+		width: 0;
+		height: 0;
+		-webkit-border-radius: 100%;
+		opacity: 0;
+	}
+}
+
+
+
+
+@-moz-keyframes fx_in {
+	from {
+		width: 0;
+		height: 0;
+		-moz-border-radius: 100%;
+		opacity: 0;
+	}
+	50% {
+		-moz-box-shadow: inset 0 0 0 0 #fff;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+		-moz-border-radius: 0;
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fx_out {
+	from {
+		width: 100%;
+		height: 100%;
+		-moz-border-radius: 0;
+		-moz-box-shadow: inset 0 0 0 0 #fff;
+		opacity: 1;
+	}
+	50% {
+		-moz-box-shadow: inset 0 0 0 80em #fff;
+	}
+	to {
+		width: 0;
+		height: 0;
+		-moz-border-radius: 100%;
+		opacity: 0;
+	}
+}
+
+
+
+@-o-keyframes fx_in {
+	from {
+		width: 0;
+		height: 0;
+		-o-border-radius: 100%;
+		opacity: 0;
+	}
+	50% {
+		-o-box-shadow: inset 0 0 0 0 #fff;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+		-o-border-radius: 0;
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fx_out {
+	from {
+		width: 100%;
+		height: 100%;
+		-o-border-radius: 0;
+		-o-box-shadow: inset 0 0 0 0 #fff;
+		opacity: 1;
+	}
+	50% {
+		-o-box-shadow: inset 0 0 0 80em #fff;
+	}
+	to {
+		width: 0;
+		height: 0;
+		-o-border-radius: 100%;
+		opacity: 0;
+	}
+}
+
+
+
+
+@-ms-keyframes fx_in {
+	from {
+		width: 0;
+		height: 0;
+		-ms-border-radius: 100%;
+		opacity: 0;
+	}
+	50% {
+		-ms-box-shadow: inset 0 0 0 0 #fff;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+		-ms-border-radius: 0;
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fx_out {
+	from {
+		width: 100%;
+		height: 100%;
+		-ms-border-radius: 0;
+		-ms-box-shadow: inset 0 0 0 0 #fff;
+		opacity: 1;
+	}
+	50% {
+		-ms-box-shadow: inset 0 0 0 80em #fff;
+	}
+	to {
+		width: 0;
+		height: 0;
+		-ms-border-radius: 100%;
+		opacity: 0;
+	}
+}
+
+@keyframes fx_in {
+	from {
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		opacity: 0;
+	}
+	50% {
+		box-shadow: inset 0 0 0 0 #fff;
+	}
+	to {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fx_out {
+	from {
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+		box-shadow: inset 0 0 0 0 #fff;
+		opacity: 1;
+	}
+	50% {
+		box-shadow: inset 0 0 0 80em #fff;
+	}
+	to {
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		opacity: 0;
+	}
+}
+
+
+/*Анимация всплытия по ключевым кадрам*/
+
+
+/* Адаптивность для больших экранов*/
+
+@media (min-width: 980px) {
+	.gallery_item_list {
+		width: 50% !important;
+	}
+	.gallery_item {
+		width: 24.45%;
+	}
+	.gallery_item_preview a img {
+		height: 180px;
+	}
+	.box {
+		width: 60%;
+		max-height: 550px;
+	}
+}
+
+
+/* Переходный адаптив с портретного режима (на планшетах) до больших экранов*/
+
+@media (min-width: 320px) 
+{.gallery_item { height: 10%}
+	
+@media (min-width: 768px) and (max-width: 979px) {
+	.gallery_item_list {
+		width: 60% !important;
+	}
+	.gallery_item {
+		width: 45.83%;
+		margin-left: 3%;
+	}
+	.gallery_item_preview a img {
+		height: 180px;
+	}
+	.box {
+		width: 70%;
+		max-height: 550px;
+	}
+	
+}
+	
+
+@media (min-width: 1024px ) {
+	.gallery_item {
+		width: 20.90%;
+		margin-left: 3%;
+		margin-top: 1%!important
+	}
+	
+}
+	
+@media (  width: 2560px) { .wrapper {
+	 margin: 5% auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+		.gallery_item {
+		width: 14.90%;
+		margin-left: 3%;
+		margin-top: 1%!important
+	}
+	
+	.gallery {margin-left: 30%}
+	
+}
+
+
+/*Переходный адаптив с разрешения телефонов на планшеты*/
+
+@media (max-width: 767px) {
+	.gallery_item_list {
+		width: 70% !important;
+	}
+	.gallery_item {
+		width: 49.3%;
+	}
+	.gallery_item_preview a img {
+		height: 180px;
+	}
+	.box {
+		margin: auto;
+		padding: 4em 1em 1em 1em;
+		width: 80%;
+		height: 500px;
+	}
+	.cl {
+		top: 0;
+		right: 0.5em;
+	}
+}
+
+
+/* Адаптив под маленькие экраны */
+
+@media (max-width: 480px) {
+	.gallery_item_list {
+		width: 100% !important;
+	}
+	.gallery_item {
+		width: 100%;
+	}
+	.gallery_item_preview a img {
+		height: 200px;
+	}
+	.box {
+		background: #F8F8F8;
+		padding: 4em 1em 1em 1em;
+		width: 100%;
+		height: auto;
+	}
+	.cl {
+		top: 0;
+		right: 0.5em;
+	}
+	.gallery_item_list {
+		width: 100% !important;
+	}
+}
+
+
+/* Адаптив под маленькие экраны */
+
+
+
+/*Футер*/
+
+.footer {
+	width: 100%;
+	background: #1F1B20;
+	display: block;
+	margin-top: 4%;
+	overflow: hidden
+}
+
+
+
+
+
+/*Размеры и стили внутренней части футера*/
+
+.inner-footer {
+	width: 95%;
+	margin: auto;
+	padding: 20px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.footer-items {
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	color: #fff;
+	font-family:'RussoOne'
+	
+}
+
+.bottom_menu {
+	font-weight: 100;
+	font-size: 25px;
+	color: #E35F21;
+	font-family:'RussoOne';
+}
+
+.about_bottom {
+	font-weight: 100;
+	font-size: 25px;
+	color: #E35F21;
+}
+
+#contacts_list {
+	font-weight: 100;
+	font-size: 12px;
+}
+
+
+/*Размеры и стили внутренней части футера*/
+
+
+/*Самая левая часть футера с названием ресторана и девизом*/
+
+.footer-items p {
+	font-size: 25px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
+}
+
+#motto {
+	color: #E35F21;
+	font-weight: 100;
+	font-size: 25px;
+	color: #E35F21;
+}
+
+.footer-items h1 {
+	color: #fff;
+}
+
+.footer-content {
+  position: relative;
+margin-left: 17%;
+margin-top: 2%;	
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 50px;
+margin-top: 3%;	
+}
+.footer-logo img {
+    max-width: 150px;
+}
+
+/*Самая левая часть футера с названием ресторана и девизом*/
+
+
+/*Декоративные линии под названиями "блоков" футера*/
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #E35F21;
+	color: #E35F21;
+	background-color: #E35F21;
+	border: 0px;
+}
+
+
+/*Декоративные линии под названиями "блоков" футера*/
+
+
+/* Списки сабменю футера*/
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+ul a:hover {
+	color: #ff9800;
+}
+
+ul li {
+	margin: 10px 0;
+	height: 25px;
+}
+
+li i {
+	font-weight: 100;
+	font-size: 25px;
+	color: #FEFEFE;
+	margin-right: 20px;
+}
+
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/* Списки сабменю футера*/
+
+
+/*Стили мини кнопок соцсетей в нижней части футера справа*/
+
+.social-media a {
+	text-decoration: none;
+}
+
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.social-media i:hover {
+	transform: scale(1.5);
+}
+
+
+/*Стили мини кнопок соцсетей в нижней части футера справа*/
+
+
+/*Нижняя полоска футера там где копирайт*/
+
+.footer-bottom {
+	padding: 10px;
+	background: #1F1B20;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	font-family:'RussoOne';
+}
+
+
+/*Нижняя полоска футера там где копирайт*/
+
+
+/* Адаптив футера под разрешения планшетов*/
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+
+/* Адаптив футера под разрешения планшетов*/
+
+
+/* Адаптив футера под разрешения мобил*/
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+}
+
+
+/* Адаптив футера под разрешения мобил*/
+
+
+/*Футер*/
+
+
+/******************************************************Кнопки (Библиотека Bootstrap Font Awesome)************************************************************/
+
+
+/*ВАЖНО! Кнопка заказа обратного звонка - это виджет с сайта - https://callback-free.ru, она стилизуется через сайт, не через CSS!*/
+
+
+/*Стили кнопки Whatsapp (ВСЕ остальные кнопки копируют её стили изменяется только цвет, 
+иногда нужно вставить картинку бэкграундом, 
+а самое важное - расположить их ровно по вертикали так, 
+чтобы радиальная пульсация не заходила одна на другую!*/
+
+.whatsapp-button {
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+	transform: translate(-50%, -50%);
+	background: #25D366;
+	/*цвет кнопки*/
+	border-radius: 50%;
+	width: 55px;
+	/*ширина кнопки*/
+	height: 55px;
+	/*высота кнопки*/
+	color: #fff;
+	text-align: center;
+	line-height: 53px;
+	/*центровка иконки в кнопке*/
+	font-size: 35px;
+	/*размер иконки*/
+	z-index: 9999;
+	background-image: url(../Imgicon/whatsappicon.png);
+	background-position: center;
+	background-size: contain;
+	opacity: .6
+}
+
+.whatsapp-button a {
+	color: #fff;
+}
+
+.whatsapp-button:before,
+.whatsapp-button:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	border: 50%;
+	border: 1px solid #25D366;
+	/*цвет анимированных волн от кнопки*/
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: animate 1.5s linear infinite;
+	opacity: 0;
+	backface-visibility: hidden;
+}
+
+.whatsapp-button:after {
+	animation-delay: .5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+
+/*Стили кнопки Whatsapp (ВСЕ остальные кнопки копируют её стили изменяется только цвет, 
+иногда нужно вставить картинку бэкграундом, 
+а самое важное - расположить их ровно по вертикали так, 
+чтобы радиальная пульсация не заходила одна на другую!*/
+
+.instagram-button {
+	position: fixed;
+	right: 5px;
+	bottom: 120px;
+	transform: translate(-50%, -50%);
+	background-image: url(../Imgicon/Instagramcover.png);
+	border-radius: 50%;
+	width: 55px;
+	/*ширина кнопки*/
+	height: 55px;
+	/*высота кнопки*/
+	color: #fff;
+	text-align: center;
+	line-height: 53px;
+	/*центровка иконки в кнопке*/
+	font-size: 35px;
+	/*размер иконки*/
+	z-index: 9999;
+	background-position: center;
+	background-size: contain;
+	opacity: .6
+}
+
+.instagram-button:before,
+.instagram-button:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	border: 50%;
+	border: 1px solid #F77737;
+	/*цвет анимированных волн от кнопки*/
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: animate 1.5s linear infinite;
+	opacity: 0;
+	backface-visibility: hidden;
+}
+
+.instagram-button:after {
+	animation-delay: .5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+.whatsapp-button {
+	position: fixed;
+	right: 5px;
+	bottom: 10px;
+	transform: translate(-50%, -50%);
+	background: #25D366;
+	/*цвет кнопки*/
+	border-radius: 50%;
+	width: 55px;
+	/*ширина кнопки*/
+	height: 55px;
+	/*высота кнопки*/
+	color: #fff;
+	text-align: center;
+	line-height: 53px;
+	/*центровка иконки в кнопке*/
+	font-size: 35px;
+	/*размер иконки*/
+	z-index: 9999;
+	background-image: url(whatsappicon.png);
+	background-position: center;
+	background-size: contain;
+	opacity: .6
+}
+
+.whatsapp-button a {
+	color: #fff;
+}
+
+.whatsapp-button:before,
+.whatsapp-button:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	border: 50%;
+	border: 1px solid #25D366;
+	/*цвет анимированных волн от кнопки*/
+	left: -20px;
+	right: -20px;
+	top: -20px;
+	bottom: -20px;
+	border-radius: 50%;
+	animation: animate 1.5s linear infinite;
+	opacity: 0;
+	backface-visibility: hidden;
+}
+
+.whatsapp-button:after {
+	animation-delay: .5s;
+}
+
+@keyframes animate {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+
+/*Кнопка скроллинга наверх использует стили отличные от остальных кнопок!!!*/
+
+#button-up {
+	display: none;
+	position: fixed;
+	left: 20px;
+	bottom: 5px;
+	color: #fff;
+	background-color: #ed6b00;
+	text-align: center;
+	font-size: 30px;
+	padding: 15px;
+	border-radius: 50%;
+	transition: .3s;
+}
+
+#button-up:hover {
+	cursor: pointer;
+	background-color: #FF0000;
+	transition: .3s;
+}
+
+
+/*Кнопка скроллинга наверх использует стили отличные от остальных кнопок!!!*/
+
+
+/******************************************************Кнопки************************************************************/
